@@ -1,7 +1,9 @@
 from datetime import datetime
 
-str1 = input("Input date: ")
+# Створення об'єкта datetime
+now = datetime.now()
 
-datetime_obj = datetime.strptime(str1,"%Y.%m.%d")
+# Отримання ISO календаря
+iso_calendar = now.isocalendar()
 
-print(datetime_obj)
+print(f"ISO рік: {iso_calendar[0]}, ISO тиждень: {iso_calendar[1]}, ISO день тижня: {iso_calendar[2]}")
